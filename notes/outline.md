@@ -12,4 +12,4 @@ This part of the unit will cover
 * Understanding computational performance
 * Profiling and optimisation
 
-1. [Python refresher](pythonrefresher.html)
+1. [Setting up](settingup.html)
