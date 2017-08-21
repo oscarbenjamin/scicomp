@@ -1,8 +1,8 @@
 ---
 ---
 
-# Hello
+# Preliminary notes on Python
 
-## New stuff
+## Python refresher
 
-Where we're at
+

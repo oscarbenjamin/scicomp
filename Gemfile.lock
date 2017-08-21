@@ -211,6 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-theme-midnight
 
 BUNDLED WITH
    1.15.3
