@@ -3,34 +3,57 @@
 
 # Getting set up with Python
 
-## Basics
+## Outline
 
-This unit is aimed at students who have seen Python before but are perhaps a
-bit rusty with it. If you've never seen Python before then I recommend to you
-to follow a more detailed tutorial such as [the one at
-python.org](https://docs.python.org/3/tutorial/index.html). Here we will
-quickly run through some of the basic features of Python to remind everyone
-what it is about. The python.org tutorial has more detail on the basics of
-Python if you're unfamiliar with any of the topics discussed here.
+The purpose of this page is to
 
-## Installing Python
+* Remember loosely what Python is
+* Understand how to install it
+* Check that the installed set up is correct
+* Understand the basic usage of the Python interpreter
+* Introduce the notation used in subsequent sections
 
-Python is many different things. Firstly it is programming language in which
-we can write Python code. Secondly it is a *program* which we used to run our
-Python code. This program is called the *interpreter*. In fact there are a
-number of different interpreters that you can install and use for running your
-Python code or that you can use in different environments.
+Although this is mostly about setting Python up it is still worth reading even
+if you already have Python set up on your computer. At a minimum you should
+verify that you can run Python in the ways described below and that the
+scientific modules are installed.
+
+## Which interpreter?
+
+Before we "install Python" it's worth taking a moment to consider what Python
+is. Firstly it is programming language in which we can write Python code.
+Secondly it is a *program* which we used to run our Python code. This program
+is called the *interpreter*. Thirdly there is the Python standard library
+which is a collection of additional code to go with the interpreter that we
+can make use of in our code. Finally there is a broader eco-system of
+"third-party" code written to go with your Python setup. In our case the
+third-party stuff we're interested in is the code relevant to scientific
+programming.
+
+In fact there are a number of different interpreters that you can install and
+use for running your Python code or that you can use in different
+environments. Leaving aside the standard interpreter there are other
+interpreters, notably [PyPy](https://pypy.org) (which is itself written in a
+Python-like language) and [Jython](http://www.jython.org) (written in Java),
+[MicroPython](https://micropython.org) for embedded systems and
+[Brython](https://www.brython.info) (for running in browsers).
+
+You don't need to use/install any of these different interpreters but it is
+worth mentioning their existence at this point. Each of them can run basic
+Python code equally well. Where they differ is in the more advanced features
+that you won't normally need to know about and also that they are used in
+different environments. The key point that's relevant to us here is that the
+standard Python interpreter is the only one that works with the most commonly
+used libraries for scientific computing in Python - so that's the one that we
+want right now.
 
 The standard Python interpreter is known as "CPython" (when we need to
 distinguish it from the others). The "C" in CPython is for the C programming
 language in which the interpreter is written: the interpreter is actually a C
-program.  There are other interpreters, notably PyPy (which is itself written
-in a Python-like language) and Jython (written in Java), MicroPython for
-embedded systems and Brython (for running in browsers). You don't need to
-use/install any of these different interpreters but it is worth mentioning
-their existence at this point.
+program. You can see the code for it on [github
+here](https://github.com/python/cpython).  In order to "install Python" here
+we want to install the CPython interpreter.
 
-In order to install Python here we want to install the CPython interpreter.
 We can install this using the [official installers from
 python.org](https://www.python.org/downloads/) however it
 would not come with all of the bits and pieces that we want. CPython is the
@@ -71,11 +94,77 @@ the directory that needs to be on `PATH`.
 
 Another confusion can occur here for OSX users. OSX comes with a version of
 CPython preinstalled but that is the "system python" and you shouldn't mess
-with it. Install a *different* Python using Anaconda as above (or homebrew if
-that's what you're used to). You now need to make sure that you can run this
-new version of Python when desired or otherwise you won't be able to access
-the scientific Python libraries that you install along with it. See below for
-checking the scientific libraries.
+with it. Install a *different* Python using Anaconda as above (or
+[homebrew](https://brew.sh) if that's what you're used to). You now need to
+make sure that you can run this new version of Python when desired or
+otherwise you won't be able to access the scientific Python libraries that you
+install along with it. See below for checking the scientific libraries.
+
+## Which Python version?
+
+Another thing to think about here is the version of Python that you should
+install. There are different versions of the Python language e.g. 3.4, 3.5
+etc. A new version comes out roughly every 2 years. Usually each new version
+is *backwards compatible* so that if you wrote code for say Python 3.4 then it
+will still work with 3.5. However in going from Python 2.x to Python 3.x a
+number of backward *incompatible* changes were introduced and the result is
+that code written for Python 2 is unlikely to work for Python 3. The
+differences are small but enough to mean that (unless carefully written) code
+is unlikely to work in both versions.
+
+Because Python 3 when released was incompatible with Python 2 many developers
+continued to use Python 2 long after Python 3 was released. As an example I am
+writing this on a new Mac Laptop running OSX 10.12. The system Python is
+version 2.7 even though version 3.0 was released almost 10 years ago. The
+current version of Python is 3.6. (This doesn't matter though because as
+explained above I should install a separate Python and I will not use the
+system Python for scientific work.)
+
+In this unit we will be using Python 3 and you should install the most recent
+version available (e.g. 3.6) but the exact version doesn't matter so much as
+long as it is not Python 2.
+
+It is important to know about the distinction between Python 2 and 3 just
+because you may sometimes find yourself in an environment where Python 2 is
+installed. The differences are reletively small so I will only mention 2
+differences here (because I have seen students caught out by them in the
+past). In Python 2 `print` is a statement. So to print two variables `x` and
+`y` with a space in between we write 
+~~~~ python
+>>> print x, y     # Py2
+~~~~
+Whereas in Python 3 `print` is a function and we would write
+~~~~ python
+>>> print(x, y)    # Py3
+~~~~
+Another difference is that in Python 2 division of two `int`s gives another
+`int` rounding towards minus infinity if necessary (floor division)
+~~~~ python
+>>> 21 / 2         # Py2
+10
+~~~~
+whereas in Python 3 we have "true division"
+~~~~ python
+>>> 21 / 2         # Py3
+10.5
+~~~~
+These differences are small in the grand scheme of things but they are enough
+to mean that your code just won't work properly any more so the two Python
+version (2.x and 3.x) are essentially considered as distinct - although
+similar - programming languages.
+
+There are other differences that I don't want to go into here. The important
+thing is to know that:
+
+* There are difference between Python 2 and 3
+* Different Python 3 versions e.g. 3.4, 3.5 etc are basically equivalent for
+  our purposes.
+* We will use Python 3 and you should install the most recent version of
+  Python 3
+* You may someday find yourself accidentally using Python 2 which could be
+  confusing at the time
+* You can always check the Python version with `python --version` or
+  `import sys; print(sys.version)`
 
 ## Running Python
 
@@ -87,7 +176,7 @@ an interactive terminal. Typically when Python is installed IDLE will also be
 installed along with some kind of shortcut that you can use to run IDLE. There
 are also other IDEs used by Python programmers e.g.
 [spyder](https://pythonhosted.org/spyder/) is popular with scientific
-programmers. Some people also like to write scientific code in the form of
+programmers. Many people also like to write scientific code in the form of
 [Jupyter notebooks](http://jupyter.org/).
 
 ### Interactive mode
@@ -119,11 +208,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 The above is how a quick terminal session on my computer looks where I run
 Python and type a few interactive commands. Note the conventions that will be
 used through these notes for a terminal session - I will assume that you
-understand these throughout these notes. The commands that I type in the
-terminal are on the lines that begin with a `$` symbol. This is the standard
-terminal prompt on unixy (non-Windows) systems telling me that the terminal
-expects a command line to be entered. On Windows the prompt may look different
-but within the notes I will always use `$` to indicate a terminal prompt.
+understand these throughout. The commands that I type in the terminal are on
+the lines that begin with a `$` symbol. This is the standard terminal prompt
+on Unixy (non-Windows) systems telling me that the terminal expects a command
+line to be entered. On Windows the prompt may look different but within the
+notes I will always use `$` to indicate a terminal prompt.
 
 The command I run here is simply `"python"` with no arguments. This invokes
 the Python interpreter in *interactive mode* so that after printing a startup
@@ -201,7 +290,8 @@ using the interactive terminal:
 >>> import matplotlib
 ~~~~
 
-If all goes well these commands will not do anything. If you see something like
+If all goes well these commands will not appear to do anything (except take
+time). If you see something like
 ~~~~ python
 >>> import numpy
 Traceback (most recent call last):
@@ -211,12 +301,12 @@ ImportError: No module named numpy
 then you don't have the scientific libraries installed. Or it could mean that
 you're running the wrong Python since it is possible to have many installed...
 
-Either way at this point you need to sort it out so that you can run Python
-and have the scientific libraries installed.
+Either way at this point you need to sort it out so that you can run the right
+version of Python and have the scientific libraries installed.
 
 ## Summary
 
-At this point I am assuming that
+By now I am assuming that
 
 * You have Python (and scientific libraries) installed.
 * You have a text-editor suitable for programming installed.
