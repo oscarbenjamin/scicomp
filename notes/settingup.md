@@ -73,7 +73,7 @@ libraries such as `numpy` for Matlab-style arrays and `matplotlib` for
 plotting that we are going to need to use in this unit.
 
 However you install Python and these additional libraries it is important to
-ensure that you can run Python from terminal. Pay careful attention to any
+ensure that you can run Python from the terminal. Pay careful attention to any
 options in the installer that refer to "adding Python to the PATH environment
 variable" since this is the key to getting this set up right. If this isn't
 right then you'll see something like "Unrecognised command: python". It's
@@ -126,7 +126,7 @@ long as it is not Python 2.
 
 It is important to know about the distinction between Python 2 and 3 just
 because you may sometimes find yourself in an environment where Python 2 is
-installed. The differences are reletively small so I will only mention 2
+installed. The differences are reletively small so I will only mention two
 differences here (because I have seen students caught out by them in the
 past). In Python 2 `print` is a statement. So to print two variables `x` and
 `y` with a space in between we write 
@@ -137,7 +137,7 @@ Whereas in Python 3 `print` is a function and we would write
 ~~~~ python
 >>> print(x, y)    # Py3
 ~~~~
-Another difference is that in Python 2 division of two `int`s gives another
+Another difference is that in Python 2 division of two `ints`` gives another
 `int` rounding towards minus infinity if necessary (floor division)
 ~~~~ python
 >>> 21 / 2         # Py2
@@ -150,19 +150,19 @@ whereas in Python 3 we have "true division"
 ~~~~
 These differences are small in the grand scheme of things but they are enough
 to mean that your code just won't work properly any more so the two Python
-version (2.x and 3.x) are essentially considered as distinct - although
-similar - programming languages.
+versions (2.x and 3.x) are essentially considered as distinct programming
+languages - although they are *very* similar.
 
-There are other differences that I don't want to go into here. The important
+There are other differences that I don't want to go into here but the important
 thing is to know that:
 
 * There are difference between Python 2 and 3
 * Different Python 3 versions e.g. 3.4, 3.5 etc are basically equivalent for
   our purposes.
 * We will use Python 3 and you should install the most recent version of
-  Python 3
+  Python 3 that is available via your chosen method of installation.
 * You may someday find yourself accidentally using Python 2 which could be
-  confusing at the time
+  very confusing when it happens.
 * You can always check the Python version with `python --version` or
   `import sys; print(sys.version)`
 
@@ -177,11 +177,11 @@ installed along with some kind of shortcut that you can use to run IDLE. There
 are also other IDEs used by Python programmers e.g.
 [spyder](https://pythonhosted.org/spyder/) is popular with scientific
 programmers. Many people also like to write scientific code in the form of
-[Jupyter notebooks](http://jupyter.org/).
+[Jupyter notebooks](http://jupyter.org/). We will look at these things later.
 
 ### Interactive mode
 
-All of those ways of running Python are useful in various different
+Each of the above ways of running Python are useful in various different
 situations. None of them can completely replace being able to run Python using
 a command line though. That is why we are going to begin by running Python
 from the system terminal by typing the command `"python"`:
@@ -226,7 +226,7 @@ terminal will not print the special value `None`).
 
 We can type a multiline piece of code such as the `for`-loop shown above. The
 interpreter shows `...` to indicate that some lines are continuations of the
-command.
+same section of code.
 
 The Python interpreter in interactive mode is also called the Python *shell*.
 However the normal non-Python terminal also has a different shell (called
@@ -244,7 +244,7 @@ shell or vice-versa - this will never achieve anything sensible.
 
 There are a few ways to leave the interactive shell. I normally do it by
 sending the EOF (end of file) signal. On Unixy (OSX, Linux, ...) systems you
-send EOF with Ctrl-D. On Windows you have to do Ctrl-Z followed by Enter.
+send EOF with Ctrl-D. On Windows you press Ctrl-Z followed by Enter.
 After exitting you should be back to the `$` prompt (or Windows equivalent).
 You can then type command lines again. To reenter the Python shell run
 `python` again.
@@ -310,8 +310,8 @@ using the interactive terminal:
 >>> import matplotlib
 ~~~~
 
-If all goes well these commands will not appear to do anything (except take
-time). If you see something like
+If all goes well these import statements will not appear to do anything
+(except perhaps take a little time). If you see something like
 ~~~~ python
 >>> import numpy
 Traceback (most recent call last):
@@ -330,10 +330,12 @@ By now I am assuming that
 
 * You have Python (and scientific libraries) installed.
 * You have a text-editor suitable for programming installed.
-* You can run Python using the `python` command from the terminal.
+* You can run Python using the `python` command from the terminal and know how
+  to use the Python interactive shell.
 * You can create a Python file and run it using `python myfile.py` from the
   terminal.
 * You understand the difference between the system shell and the Python shell
+  and know how to switch between them.
 * You understand the notation used in showing the terminal sessions above.
 
 If so then we're ready to move into the basics of Python the language!
