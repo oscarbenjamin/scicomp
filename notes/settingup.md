@@ -240,6 +240,26 @@ beginners - is that there are two different shells:
 Make sure that you don't get mixed up and type Python code into the system
 shell or vice-versa - this will never achieve anything sensible.
 
+### Exiting the interactive shell
+
+There are a few ways to leave the interactive shell. I normally do it by
+sending the EOF (end of file) signal. On Unixy (OSX, Linux, ...) systems you
+send EOF with Ctrl-D. On Windows you have to do Ctrl-Z followed by Enter.
+After exitting you should be back to the `$` prompt (or Windows equivalent).
+You can then type command lines again. To reenter the Python shell run
+`python` again.
+
+Another way to exit is using Python code:
+~~~~ terminal
+$ python
+Python 2.7.10 (default, Feb  7 2017, 00:08:15)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.exit()
+$
+~~~~
+
 ### Normal mode
 
 We can also add our code to a Python file with the extension `.py`.  Then we
