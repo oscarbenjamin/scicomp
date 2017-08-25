@@ -1,4 +1,4 @@
 name: Scientific Computation (Python refresher)
 theme: jekyll-theme-midnight
 github: [metadata]
-exclude: Makefile, README.md, Gemfile, Gemfile.lock
+exclude: [Makefile, README.md, Gemfile, Gemfile.lock]
