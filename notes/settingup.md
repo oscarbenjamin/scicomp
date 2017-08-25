@@ -137,7 +137,7 @@ Whereas in Python 3 `print` is a function and we would write
 ~~~~ python
 >>> print(x, y)    # Py3
 ~~~~
-Another difference is that in Python 2 division of two `ints`` gives another
+Another difference is that in Python 2 division of two `ints` gives another
 `int` rounding towards minus infinity if necessary (floor division)
 ~~~~ python
 >>> 21 / 2         # Py2
@@ -338,4 +338,4 @@ By now I am assuming that
   and know how to switch between them.
 * You understand the notation used in showing the terminal sessions above.
 
-If so then we're ready to move into the basics of Python the language!
+If so then we're ready to move into the [basics of Python the language...](basics.html)
