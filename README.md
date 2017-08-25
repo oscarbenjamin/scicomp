@@ -1,11 +1,17 @@
 Outline
 -------
 
-To compile notes locally - need to run
+Local setup should be:
 
-    $ bundle exec jekyll serve [--detach]
+1) Install ruby
+2) gem install bundler
+3) Ensure that `bundle` is on $PATH
 
-(with both bundle and jekyll on PATH)
+Then the Makefile will use bundle install --path .bundled to install all gems
+locally in the .bundle file (using Gemfile as specification).
+
+The Makefile should take care of building the notes locally with `make` or
+`make serve`.
 
 Building should occur automatically in github when pushing to the master
 branch.
