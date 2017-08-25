@@ -2,9 +2,9 @@
 
 all: serve
 
-Gemfile.lock: Gemfile
-	bundle install
-	touch Gemfile.lock
+.bundled: Gemfile
+	bundle install --path .bundle
+	touch $@
 
-serve: Gemfile.lock
+serve: .bundled
 	bundle exec jekyll serve
