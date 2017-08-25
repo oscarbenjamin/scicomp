@@ -13,3 +13,4 @@ This part of the unit will cover
 * Profiling and optimisation
 
 1. [Setting up](settingup.html)
+1. [Python basics](basics.html)
