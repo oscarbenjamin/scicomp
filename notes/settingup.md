@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 
 # Getting set up with Python

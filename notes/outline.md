@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 
 # Python refresher and intro to selected topics

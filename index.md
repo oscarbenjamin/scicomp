@@ -1,5 +1,5 @@
 ---
-    layout: default
+layout: default
 ---
 
 # EMAT30008 - Scientific Computing
