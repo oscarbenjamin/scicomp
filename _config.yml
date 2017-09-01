@@ -1,5 +1,5 @@
 name: Scientific Computation (Python refresher)
 markdown: kramdown
-theme: jekyll-theme-midnight
+theme: jekyll-theme-hacker
 github: [metadata]
 exclude: [Makefile, README.md, Gemfile, Gemfile.lock]
