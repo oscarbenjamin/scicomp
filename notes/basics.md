@@ -17,8 +17,8 @@ The `python.org` tutorial is aimed at the general Python programmer and our
 target is scientific programming so we have a slightly different emphasis here
 which is why I've written the following about numbers. We will also soon be
 using multi-dimensional arrays so a good understanding of *slicing* is
-essential. There are [[exercises]] at the bottom to test your understanding of
-both numbers and slicing.
+essential. There are [exercises](#exercises) at the bottom to test your
+understanding of both numbers and slicing.
 
 ## Numbers
 
@@ -206,7 +206,7 @@ we can *index* and *slice* a string:
 
 Slicing and indexing are critically important in Python and for us in this
 unit in particular. You need to make sure that you understand each of the
-expressions above perfectly (see also the [exercises](exercises) below).
+expressions above perfectly (see also the [exercises](#exercises) below).
 
 Like most other sequence types strings can be added or multiplied:
 
@@ -291,4 +291,58 @@ incorrectly using `in` like this.
 
 ## Exercises
 
-asd
+1. Explain what happens here:
+~~~~ terminal
+>>> (1 + 1e-15)
+1.000000000000001
+>>> (1 + 1e-15)-1e-15
+1.0
+>>> x = 1
+>>> y = 1e-16
+>>> x + y
+1.0
+>>> x + y == x
+True
+>>> (x + y) - y
+0.9999999999999999
+>>> x + (y - y)
+1.0
+~~~~
+
+2. What about this?
+~~~~ terminal
+>>> x = 10**16
+>>> x + 1 == x
+False
+>>> x
+10000000000000000
+>>> x + 1
+10000000000000001
+>>> x + 1 == x
+False
+>>> y = 1e16
+>>> y
+1e+16
+>>> y + 1
+1e+16
+>>> y + 1 == y
+True
+~~~~
+
+3. Find the smallest integer that cannot be represented exactly as a `float`.
+
+4. Given a `list` (or `string`) what expression gives a `list` (or `string`)
+   containing the first 5 elements of the `list`?
+
+5. How can you get all elements *after* the first 5 elements of a `list`?
+
+6. How about the *last* 5 elements of the `list`?
+
+7. How would you get only the even indexed elements of a list?
+
+8. How can you convert a number to a string (or a string to a number)?
+
+# Finished?
+
+If you're happy with these you can move on to [basics2](loops, conditionals and
+functions).
