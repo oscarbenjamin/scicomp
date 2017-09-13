@@ -344,5 +344,5 @@ True
 
 # Finished?
 
-If you're happy with these you can move on to [basics2](loops, conditionals and
-functions).
+If you're happy with these you can move on to [loops, conditionals and
+functions](basics2).
