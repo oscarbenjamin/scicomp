@@ -15,3 +15,4 @@ This part of the unit will cover
 
 1. [Setting up](settingup.html)
 1. [Python basics](basics.html)
+1. [Functions](basics2.html)
