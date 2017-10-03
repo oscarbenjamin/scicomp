@@ -18,3 +18,8 @@ This part of the unit will cover
 1. [Functions](basics2.html)
 1. [Data Structures](structures.html)
 1. [File IO](fileio.html)
+
+# Version control and scientific Python
+
+1. [Version control](versioncontrol.html)
+1. [Numpy](numpy.html)
