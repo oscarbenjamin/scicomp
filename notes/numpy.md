@@ -86,18 +86,31 @@ find the code for both [numpy](https://github.com/numpy/numpy) and
 
 7. How do I slice a matrix to cut off the last row and the last column?
 
-8. Give a Matrix `M` what does `M[M<2]` do?
+8. Give a Matrix `M` what does `M<2` give us?
+
+8. What about `M[M<2]`?
 
 9. What about `M[1<M<2]` or `M[1<M and M < 2]` or `M[(1<M) & (M<2)]`?
 
-10. How do we create matrices of 64-bit floats? What about 8-bit unsigned
-    integers?
+9. What about about `M[1:-1,1:-1]` or `M[[1, 2], [1, 2]]`?
+
+9. How can you find the determinant of a matrix, or the transpose?
+
+9. What about the eigenvectors and eigenvalues?
+
+10. How do we create vectors/matrices of 64-bit floats? What about 8-bit
+    unsigned integers?
+
+10. If `M` is a vector of *unsigned* integers what does `M[:] = -1` do?
 
 11. Explore the memory use of matrices using the `nbytes` attribute. Can you
     make sense of it?
 
 12. The function `odeint` is described in the
     [docs](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
-    Use it to solve the ODE $$x' = x$$ with initial condition $$x(0)=1$$. The
+    Use it to solve the ODE $$\dot{x} = x$$ with initial condition $$x(0)=1$$. The
     true solution has $$x(1)=\mathrm{e}$$ so what is the error in the
     numerical estimate of $$x(1)$$?
+
+13. How do we use `odeint` to solve a second order ODE e.g. $$\ddot{x} = -x$$?
+    What is the error in the numerical estimate of x(1)?
