@@ -86,7 +86,7 @@ $ git commit -m 'Adding some code...'
     2. Run `git status`, `git diff` to see what's changed
     3. Use `git add`, `git commit` to commit the changes
 
-7. Do you understand what `git commit --cached` does? (do you understand the
+7. Do you understand what `git diff --cached` does? (do you understand the
    difference between the commit, the staging area, and the working tree)?
    Look it up in the linked resources or ask someone...
 
