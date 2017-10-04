@@ -81,7 +81,7 @@ $ git commit -m 'Adding some code...'
 5. Make changes to the file and run `git status` again. Now try `git diff` -
    can you understand the output?
 
-6. Repeat these steps a few times until your familiar i.e.
+6. Repeat these steps a few times until you're familiar i.e.
     1. Change/add files
     2. Run `git status`, `git diff` to see what's changed
     3. Use `git add`, `git commit` to commit the changes

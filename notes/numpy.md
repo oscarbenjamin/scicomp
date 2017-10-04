@@ -65,6 +65,14 @@ find the code for both [numpy](https://github.com/numpy/numpy) and
 [scipy](https://github.com/scipy/scipy) on GitHub.
 
 
+## Matrices or arrays?
+
+Numpy has a function `matrix` which creates a "matrix" instead of a 2D array.
+Do *not* use this function. Never use it. More information can be found
+[here](https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html).
+When I say "matrix" below I mean that you should create a 2D array using the
+`array` function.
+
 ## Exercises
 
 1. Given a numpy array `a = np.array([1, 2, 3])` what does `a+a` give us and what
