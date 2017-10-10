@@ -24,3 +24,7 @@ This part of the unit will cover
 1. [Version control](versioncontrol.html)
 1. [Numpy](numpy.html)
 1. [Matplotlib](matplotlib.html)
+
+# Bouncing balls...
+
+1. [Bouncing ball problem](bouncing.html)
